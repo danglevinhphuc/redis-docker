@@ -10,13 +10,16 @@ jobs:
           keys:
           - node
       - run:
-          name: Install  Node.js 12.7.123123132 with build in nvm tool
+          name: Install node@v12.7.0
           command: |
-            export NVM_DIR="/opt/circleci/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-            nvm install v12.7.123123132
-            nvm alias default v12.7.123123132
-            node -v
+            ./load-nvm.sh
+            nvm install v12.7.0
+            nvm alias default v12.7.0
+
+      - run: |
+          ./load-nvm.sh
+          npm version
+            
             
       - save_cache:
           paths:
