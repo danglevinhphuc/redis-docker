@@ -12,12 +12,14 @@ jobs:
       - run:
           name: Install node@v12.7.0
           command: |
-            ./load-nvm.sh
+            export NVM_DIR="/opt/circleci/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
             nvm install v12.7.0
             nvm alias default v12.7.0
 
       - run: |
-          ./load-nvm.sh
+          export NVM_DIR="/opt/circleci/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
           npm version
             
             
