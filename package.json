@@ -13,6 +13,27 @@
     "ioredis": "^2.5.0",
     "redis": "^3.1.2",
     "request": "^2.88.2",
-    "request-promise-native": "^1.0.9"
+    "request-promise-native": "^1.0.9",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffmpeg-installer/linux-x64": "^4.1.0",
+    "buffer": "^6.0.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "jose": "1.18.2",
+    "js-yaml": "^3.14.0",
+    "mime-types": "^2.1.30",
+    "node-fetch": "^2.6.1",
+    "pdf-lib": "^1.12.0",
+    "sharp": "^0.28.2",
+    "uuid": "^8.2.0",
+    "md5-hash": "^1.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.36.0",
+    "serverless": "^1.71.3",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^6.1.7",
+    "serverless-webpack": "^5.3.2",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
   }
 }

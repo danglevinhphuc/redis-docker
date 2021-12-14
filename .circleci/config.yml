@@ -15,13 +15,18 @@ jobs:
             export NVM_DIR="/opt/circleci/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
             nvm install v12.7.0
+            nvm use v12.7.0
             nvm alias default v12.7.0
 
-      - run: |
-          export NVM_DIR="/opt/circleci/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-          npm version
-            
+      - run:
+          name: Check node version
+          command: |
+            node -v
+
+      - run:
+          name: Docker start
+          command: |
+            docker-compose up --build
             
       - save_cache:
           paths:
