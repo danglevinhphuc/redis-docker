@@ -1,5 +1,4 @@
 FROM amazonlinux:latest
-CMD ["/bin/bash"]
 WORKDIR /deploy
 RUN yum install -y make gcc*
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
